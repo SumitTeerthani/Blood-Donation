@@ -1,0 +1,11 @@
+# Write all the file name that shouldn't be published to github 
+# in this file.
+#
+# This file is used by the publish script to exclude files from
+# being published to github.  The script will read this file and
+# exclude all files listed here from being published.  This is useful
+# for files that are not meant to be published, such as the
+# .gitignore file, or the .git directory itself.
+#
+# The format of this file is a list of file names, one per line.
+# The file names are relative to the root of the repository.
