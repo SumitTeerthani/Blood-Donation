@@ -9,3 +9,5 @@ Currently, two official plugins are available:
 
 
 some changes done in readme
+
+changes part 2, the PR saga
