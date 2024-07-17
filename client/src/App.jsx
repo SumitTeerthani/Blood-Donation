@@ -3,8 +3,9 @@ import './App.css'
 import Signup from './components/Signup'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Nav from './components/Nav'
-import Home from './Home'
+import Home from './components/Home'
 import Footer from './components/Footer'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path='/bank' element={<h1>BLOOD BANK under development...</h1>} />
           <Route path='/donor' element={<h1>DONOR under development...</h1>} />
           <Route path='/reciever' element={<h1>RECIEVER under development...</h1>} />
-          <Route path='/contact' element={<h1>CONTACT US under development...</h1>} />
+          <Route path='/contact' element={<Contact/>} />
           <Route path='/logout' element={<h1>LOGOUT under development...</h1>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/login' element={<h1>LOGIN under development...</h1>} />
