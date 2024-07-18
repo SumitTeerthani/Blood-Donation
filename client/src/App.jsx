@@ -6,6 +6,7 @@ import Nav from './components/Nav'
 import Home from './components/Home'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
+import Login from './components/Login'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Route path='/contact' element={<Contact/>} />
           <Route path='/logout' element={<h1>LOGOUT under development...</h1>} />
           <Route path='/signup' element={<Signup/>} />
-          <Route path='/login' element={<h1>LOGIN under development...</h1>} />
+          <Route path='/login' element={<Login/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>
