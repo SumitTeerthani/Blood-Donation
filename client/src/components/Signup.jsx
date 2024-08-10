@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextInput from './TextInput';
 
-export default function Form() {
+export default function Signup() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -9,11 +9,9 @@ export default function Form() {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    let { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    console.log(formData);
   };
 
   const handleSubmit = (e) => {
@@ -23,8 +21,8 @@ export default function Form() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 p-10 bg-white rounded-lg shadow-lg">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="max-w-md w-full bg-white p-6 rounded-lg shadow-lg">
         <h1 className="text-3xl font-bold text-center mb-6">Register</h1>
         <form onSubmit={handleSubmit}>
           <TextInput
