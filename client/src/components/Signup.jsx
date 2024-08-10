@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import TextInput from './TextInput';
-import SelectInput from './SelectInput';
 
 export default function Signup() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
-    address: "",
-    password: "",
-    type: "Donar" // Default type
+    password: ""
   });
 
   const handleChange = (e) => {
@@ -22,13 +18,7 @@ export default function Signup() {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form submitted:", formData);
-    
   };
-
-  const typeOptions = [
-    { value: "Donar", label: "Donar" },
-    { value: "Receiver", label: "Receiver" }
-  ];
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -49,30 +39,6 @@ export default function Signup() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Enter Email Id"
-            required
-          />
-          <TextInput
-            id="phone"
-            label="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="Enter Phone Number"
-            required
-          />
-          <TextInput
-            id="address"
-            label="Address"
-            value={formData.address}
-            onChange={handleChange}
-            placeholder="Enter Address"
-            required
-          />
-          <SelectInput
-            id="type"
-            label="Select Type"
-            value={formData.type}
-            onChange={handleChange}
-            options={typeOptions}
             required
           />
           <TextInput
